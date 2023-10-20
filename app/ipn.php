@@ -6,8 +6,6 @@
     //Mercado Pago SDK
     require '../vendor/autoload.php';
 
-    use MercadoPago;
-
     //Add Mercado Pago credentials
     MercadoPago\SDK::setAccessToken(MP_ACCESS_TOKEN);
 
