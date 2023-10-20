@@ -14,13 +14,13 @@
 
     <script src="https://www.mercadopago.com/v2/security.js" view="callback"></script>
 
-    <link rel="stylesheet" href="assets/category-landing.css" media="screen, print">
+    <link rel="stylesheet" href="../assets/category-landing.css" media="screen, print">
 
-    <link rel="stylesheet" href="assets/category.css" media="screen, print">
+    <link rel="stylesheet" href="../assets/category.css" media="screen, print">
 
-    <link rel="stylesheet" href="assets/merch-tools.css" media="screen, print">
+    <link rel="stylesheet" href="../assets/merch-tools.css" media="screen, print">
 
-    <link rel="stylesheet" href="assets/fonts" media="">
+    <link rel="stylesheet" href="../assets/fonts" media="">
     <style>
         .as-filter-button-text {
             font-size: 26px;
@@ -64,7 +64,7 @@
                         <div class="pd-billboard pd-category-header">
                             <div class="pd-l-plate-scale">
                                 <div class="pd-billboard-background">
-                                    <img src="assets/music-audio-alp-201709" alt="" width="1440" height="320" data-scale-params-2="wid=2880&amp;hei=640&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1503948581306" class="pd-billboard-hero ir">
+                                    <img src="../assets/music-audio-alp-201709" alt="" width="1440" height="320" data-scale-params-2="wid=2880&amp;hei=640&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1503948581306" class="pd-billboard-hero ir">
                                 </div>
                                 <div class="pd-billboard-info">
                                     <h1 class="pd-billboard-header pd-util-compact-small-18">Tienda e-commerce</h1>
@@ -100,33 +100,8 @@
                         </div>
                         <div class="as-accessories-results  as-search-desktop">
                             <div class="width:60%">
-                                <div class="as-producttile-tilehero with-paddlenav " style="float:left;">
-                                    <div class="as-dummy-container as-dummy-img">
-
-                                        <img src="assets/wireless-headphones" class="ir ir item-image as-producttile-image  " style="max-width: 70%;max-height: 70%;"alt="" width="445" height="445">
-                                    </div>
-                                    <div class="images mini-gallery gal5 ">
-
-
-                                        <div class="as-isdesktop with-paddlenav with-paddlenav-onhover">
-                                            <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
-                                                <div class="as-tilegallery-element as-image-selected">
-                                                    <div class=""></div>
-                                                    <img src="assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
-                                                </div>
-
-                                            </div>
-
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
                                 <div class="as-producttile-info" style="float:left;min-height: 168px;">
-                                    <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
+                                    <div class="as-producttile-titlepricewraper" style="min-height: 128px; margin-top: 15px;">
                                         <h3>
                                             Payment Type: <?php echo $_GET['payment_type'] ?>
                                         </h3>
@@ -137,7 +112,6 @@
                                             External reference: <?php echo $_GET['external_reference'] ?>
                                         </h3>
                                     </div>
-                                    <a href="<?php echo $preference->init_point; ?>" class="mercadopago-button">Pagar con Mercado Pago</a>
                                 </div>
                             </div>
                         </div>
