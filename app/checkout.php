@@ -3,9 +3,7 @@
     require_once 'config/configuration.php';
 
     //Mercado Pago SDK
-    require '../vendor/autoload.php';
-
-    use MercadoPago;
+    require 'vendor/autoload.php';
 
     //Add Mercado Pago credentials
     MercadoPago\SDK::setAccessToken(MP_ACCESS_TOKEN);
@@ -38,7 +36,10 @@
     $item->title = $_POST['title'];
     $item->quantity = 1;
     $item->unit_price = $_POST['price'];
-    $item->picture_url = "https://alejandro088-mp-ecommerce-php.herokuapp.com" . $img;
+
+    $img = explode("/", $_POST["img"]);
+    $item->picture_url = RUTE_URL. "/" . $img[1];
+
     $item->description = "Dispositivo móvil de Tienda e-commerce";
 
     //Preference
@@ -46,11 +47,18 @@
     $preference->payer = $payer;
     $preference->payment_methods = array(
         "excluded_payment_methods" => array(
-            array("id" => "amex")
-        ),
-        "excluded_payment_types" => array(
-            array("id" => "atm")
+            array("id" => "visa")
         ),
         "installments" => 6
     );
 
+    $preference->external_reference = "fuentes.emanuel18@gmail.com";
+    $preference->auto_return = "approved";
+    $preference->notification_url = RUTE_URL."/app/ipn.php";
+    $preference->back_urls = array(
+        "success" => RUTE_URL . "/callback/success.php",
+        "failure" => RUTE_URL . "/callback/failure.php",
+        "pending" => RUTE_URL . "/callback/pending.php"
+    );
+
+    $preference->save();
